@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 import { useAppStore } from "./state/appStore";
 
-import InputText from "./components/InputText";
+import InputText from "./components/InputText/InputText";
 import NavConfig from "./components/NavConfig";
 import Timer from "./components/Timer";
 import Container from "./components/ui/Container";
