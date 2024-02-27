@@ -6,9 +6,10 @@ export default function NavConfig() {
     const setText = useAppStore(state => state.setText);
     const languaje = useAppStore(state => state.languaje);
     const time = useAppStore(state => state.time);
+    const isTyping = useAppStore(state => state.isTyping);
 
     return (
-        <nav className="flex bg-zinc-800 rounded-md py-1 justify-around">
+        <nav className={ isTyping ? "hidden" : "flex bg-zinc-800 rounded-md py-1 justify-evenly"}>
             <ul className="flex gap-x-4">
                 <button
                     onClick={() => setText("ES")}
@@ -27,6 +28,7 @@ export default function NavConfig() {
                 <button onClick={() => setTime(15)} className={time == 15 ? "text-emerald-400" : "text-slate-300"}>15</button>
                 <button onClick={() => setTime(30)} className={time == 30 ? "text-emerald-400" : "text-slate-300"}>30</button>
                 <button onClick={() => setTime(60)} className={time == 60 ? "text-emerald-400" : "text-slate-300"}>60</button>
+                <button onClick={() => setTime(120)} className={time == 120 ? "text-emerald-400" : "text-slate-300"}>120</button>
             </ul>
         </nav>
     );
