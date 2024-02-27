@@ -1,10 +1,15 @@
+import InputText from "./components/InputText";
+import NavConfig from "./components/NavConfig";
+import Timer from "./components/Timer";
 import Container from "./components/ui/Container";
 
 export default function App() {
 
   return (
     <Container>
-      <h1>React Typescript Template</h1>
+      <Timer />
+      <NavConfig />
+      <InputText />
     </Container>
   )
 }
